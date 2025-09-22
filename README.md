@@ -60,8 +60,25 @@ Personal, version-controlled configuration files for my home lab environment acr
 
 Fastfetch examples from each environment:
 
-- Windows 11: `fasfetch/Win11-fastfetch.png`
-- Ubuntu Desktop (WSL shown): `fasfetch/WSL-fastfetch.png`
-- Ubuntu Server: `fasfetch/Ubuntu-server-fastfetch.png`
+<table>
+  <tr>
+    <td>
+      <strong>Windows 11</strong><br>
+      <img src="fasfetch/Win11-fastfetch.png" alt="Windows 11 Fastfetch" width="700">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Ubuntu Desktop (WSL)</strong><br>
+      <img src="fasfetch/WSL-fastfetch.png" alt="WSL Fastfetch" width="700">
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <strong>Ubuntu Server</strong><br>
+      <img src="fasfetch/Ubuntu-server-fastfetch.png" alt="Ubuntu Server Fastfetch" width="700">
+    </td>
+  </tr>
+  </table>
 
-If you prefer embedding images, move them under `docs/images/` and update references accordingly.
+Note: Images are stored under `fasfetch/`. If you prefer a cleaner layout or additional docs, consider moving them to `docs/images/` and updating paths accordingly.
