@@ -1,12 +1,12 @@
-============================================================
+=============================
 🏠 Homelab Master Guide
-============================================================
+=============================
 
 This document combines key setup guides, commands, and best practices for your homelab, covering Proxmox, Ubuntu, Docker, Robocopy, Python virtual environments, and common admin tasks.
 
-============================================================
+=============================
 📑 Table of Contents
-============================================================
+=============================
 1. Proxmox: VM/Container Setup & Templates
 2. Docker Installation (Ubuntu)
 3. Ubuntu User Setup Guide
@@ -15,9 +15,9 @@ This document combines key setup guides, commands, and best practices for your h
 6. Rsync Commands for File/Folder Sync
 
 
-------------------------------------------------------------
+-------------------------------------------
 1. Proxmox: VM/Container Setup & Templates
-------------------------------------------------------------
+-------------------------------------------
 - Change timezone:
 ```bash
 timedatectl list-timezones
@@ -55,9 +55,9 @@ sudo nano /etc/hostname
 sudo nano /etc/hosts
 ```
 
-------------------------------------------------------------
+-------------------------------------------
 2. Docker Installation (Ubuntu)
-------------------------------------------------------------
+-------------------------------------------
 - Remove old versions:
 ```bash
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -96,9 +96,9 @@ docker compose version
 sudo usermod -aG docker <username>
 ```
 
-------------------------------------------------------------
+-------------------------------------------
 3. Ubuntu User Setup Guide
-------------------------------------------------------------
+-------------------------------------------
 - Create user:
 ```bash
 sudo adduser <username>
@@ -133,9 +133,9 @@ which fish
 sudo chsh -s /usr/bin/fish <username>
 ```
 
-------------------------------------------------------------
+-------------------------------------------
 4. Robocopy Best Settings
-------------------------------------------------------------
+-------------------------------------------
 ```bash
 robocopy "N:\mediaserver\other videos\Basement Finishing Videos" "D:\Basement Finishing Videos" /E /MT:32 /R:1 /W:1 /NFL /NDL /NP /LOG+:robocopy.log
 ```
@@ -147,9 +147,9 @@ robocopy "N:\mediaserver\other videos\Basement Finishing Videos" "D:\Basement Fi
 - /NP → no per-file progress
 - /LOG+: → append log
 
-------------------------------------------------------------
+-------------------------------------------
 5. Python Virtual Environments (venv)
-------------------------------------------------------------
+-------------------------------------------
 - Create:
 ```bash
 python -m venv <env_name>
@@ -171,10 +171,9 @@ Linux/macOS: source <env_name>/bin/activate
     pip freeze > requirements.txt
     pip install -r requirements.txt
 
-------------------------------------------------------------
-------------------------------------------------------------
-6. Rsync Commands for File/Folder Sync
-------------------------------------------------------------
+-------------------------------------------
+1. Rsync Commands for File/Folder Sync
+-------------------------------------------
 Rsync is a powerful tool for syncing files between systems over SSH.
 
 Common flags explained:
@@ -216,6 +215,6 @@ rsync -rltDvzP --no-perms --no-owner --no-group -m --dry-run \
   dbleak42@tamarind.whatbox.ca:/home/dbleak42/files/ \
   /mnt/hdd-storage-1/mediaserver/torrents/
 
-============================================================
+=============================
 ✅ End of Guide
-============================================================
+=============================
