@@ -1,0 +1,139 @@
+# ===========================
+# Starship Prompt Configuration
+# ===========================
+
+# Add a newline before each prompt
+add_newline = true
+
+# Timeout (ms) for commands run by Starship (like Git status)
+command_timeout = 1000
+
+# Global format for how the prompt is structured
+format = '''
+[┌───────────────────▷](bold blue)
+[│](bold blue)$os$username$hostname$directory$git_branch$git_status
+[└─▶](bold blue) '''
+
+# ===========================
+# Character (prompt symbol)
+# ===========================
+[character]
+# Symbol to show on success
+success_symbol = '[→](bold green)'
+# Symbol to show on error
+error_symbol = '[→](bold green)'
+
+# ===========================
+# Operating System Section
+# ===========================
+[os]
+# Let each symbol carry its own color
+format = "[$symbol]($style) "
+disabled = false
+
+# Override per-OS symbols with color styling
+[os.symbols]
+Windows = "[ ](blue bold)"   # Classic Windows blue
+Arch    = "[󰣇 ](cyan bold)"   # Arch Linux cyan
+Ubuntu  = "[ ](red bold)"    # Ubuntu orange/red
+Macos   = "[󰀵 ](magenta bold)" # macOS purple/magenta
+
+# ===========================
+# Username Section
+# ===========================
+[username]
+# Regular user styling
+style_user = 'white bold'
+# Root user styling
+style_root = 'black bold'
+# Format for displaying the username
+format = '[$user]($style) '
+disabled = false
+# Always show username, even if not root
+show_always = true
+
+# ===========================
+# Hostname Section
+# ===========================
+[hostname]
+# Show hostname even if not over SSH
+ssh_only = false
+format = 'on [$hostname](bold yellow) '
+disabled = false
+
+# ===========================
+# Directory Section
+# ===========================
+[directory]
+# Truncate deeply nested paths to 4 dirs
+truncation_length = 4
+truncation_symbol = '…/'
+# Custom home symbol
+home_symbol = '󰋜 ~'
+# Style and icon for read-only directories
+read_only_style = 'red'
+read_only = '  '
+# Format to show path
+format = 'at [$path]($style)[$read_only]($read_only_style) '
+
+# ===========================
+# Git Branch Section
+# ===========================
+[git_branch]
+# Branch icon
+symbol = ' '
+format = 'via [$symbol$branch]($style)'
+# Uncomment if you want to truncate long branch names
+# truncation_length = 4
+truncation_symbol = '…/'
+style = 'bold green'
+
+# ===========================
+# Git Status Section
+# ===========================
+[git_status]
+format = '[$all_status$ahead_behind]($style) '
+style = 'bold green'
+# Custom symbols for Git states
+conflicted = '🏳'
+up_to_date = ''
+untracked = ' '
+ahead = '⇡${count}'
+diverged = '⇕⇡${ahead_count}⇣${behind_count}'
+behind = '⇣${count}'
+stashed = ' '
+modified = ' '
+staged = '[++\($count\)](green)'
+renamed = '襁 '
+deleted = ' '
+
+# ===========================
+# Kubernetes Section
+# ===========================
+[kubernetes]
+format = 'via [󱃾 $context\($namespace\)](bold purple) '
+disabled = false
+
+# ===========================
+# Disabled Modules (not shown in prompt)
+# ===========================
+[vagrant]
+disabled = true
+
+[docker_context]
+disabled = true
+
+[helm]
+disabled = true
+
+[python]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[ruby]
+disabled = true
+
+[terraform]
+disabled = true
