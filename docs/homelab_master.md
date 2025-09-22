@@ -1,12 +1,10 @@
-=============================
-🏠 Homelab Master Guide
-=============================
+# 🏠 Homelab Master Guide
 
 This document combines key setup guides, commands, and best practices for your homelab, covering Proxmox, Ubuntu, Docker, Robocopy, Python virtual environments, and common admin tasks.
 
-=============================
-📑 Table of Contents
-=============================
+
+# 📑 Table of Contents
+
 1. Proxmox: VM/Container Setup & Templates
 2. Docker Installation (Ubuntu)
 3. Ubuntu User Setup Guide
@@ -215,6 +213,5 @@ rsync -rltDvzP --no-perms --no-owner --no-group -m --dry-run \
   dbleak42@tamarind.whatbox.ca:/home/dbleak42/files/ \
   /mnt/hdd-storage-1/mediaserver/torrents/
 
-=============================
-✅ End of Guide
-=============================
+
+# ✅ End of Guide
