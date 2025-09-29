@@ -214,4 +214,23 @@ rsync -rltDvzP --no-perms --no-owner --no-group -m --dry-run \
   /mnt/hdd-storage-1/mediaserver/torrents/
 
 
+
+==== TORRENTS ====
+Copying torrents from qbtuser/downloads to the NAS
+
+Simulate (dry run) before actual transfer:
+```bash
+rsync -avh --progress --dry-run \\
+  qbtuser@10.42.42.10:/home/qbtuser/Downloads/ \\
+  /mnt/hdd-storage-1/mediaserver/torrents
+```
+
+Run actual transfer:
+```bash
+rsync -avh --progress \\
+  qbtuser@10.42.42.10:/home/qbtuser/Downloads/ \\
+  /mnt/hdd-storage-1/mediaserver/torrents
+```
+
+
 # ✅ End of Guide
